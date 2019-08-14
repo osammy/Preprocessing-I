@@ -1,1 +1,319 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+/* Imports */
+@font-face {
+  font-family: 'Varela Round';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Varela Round Regular'), local('VarelaRound-Regular'), url(https://fonts.gstatic.com/s/varelaround/v12/w8gdH283Tvk__Lua32TysjIfp8uK.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN_r8OUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v17/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UNirkOUuhs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v17/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
+}
+/*End Imports */
+:root {
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
+}
+/*Less Variables*/
+/*end less variables*/
+/* LESS MIXINS*/
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+/*END MIXINS */
+html,
+body {
+  height: 100%;
+  background: #eee;
+}
+html .container,
+body .container {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+header {
+  padding: 0;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+header nav a {
+  flex-basis: 100px;
+  text-decoration: none;
+  color: #000;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.content .left-content {
+  flex-basis: 550px;
+  padding: 2rem 7rem;
+  color: #8d969d;
+  background: #fff;
+}
+.content .left-content .left-content-img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dashed navy;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.content .left-content .left-content-img-div img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  text-align: center;
+}
+.content .left-content h2 {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 3rem;
+  font-family: 'Varela Round', sans-serif;
+}
+.content .left-content .details > div {
+  display: flex;
+  justify-content: space-between;
+  color: #8d969d;
+  padding: 0.5rem 0;
+}
+.content .left-content .details > div div:first-child {
+  font-weight: bold;
+}
+.content .left-content .details > div .unique-detail {
+  color: #62b476;
+}
+.content .left-content #details-footer {
+  margin: 5rem 0 0 0;
+}
+.content .right-content {
+  background-color: #3e3d42;
+  flex-basis: 550px;
+  padding: 2rem;
+  color: #d9d8ca;
+}
+.content .right-content h4 {
+  color: #62b476;
+  font-weight: 500;
+}
+.content .right-content .right-content-body {
+  display: flex;
+  justify-content: space-between;
+}
+.content .right-content .right-content-body > div {
+  margin: 1rem 0;
+}
+.content .right-content .right-content-body > div p {
+  color: #8d969d;
+  padding: 0.5rem 0;
+  line-height: 1rem;
+  font-size: 0.85rem;
+}
+.content .right-content .right-content-body > div div > span {
+  color: #8d969d;
+  padding: 0.5rem 0;
+  line-height: 1rem;
+  font-size: 0.85rem;
+}
+.content .right-content .right-content-body div:first-child {
+  flex-basis: 30%;
+}
+.content .right-content .right-content-body div:nth-child(2) {
+  flex-basis: 60%;
+}
+.content .right-content .right-content-body h4 {
+  color: #62b476;
+}
+.content .right-content .right-content-bottom-body {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 0 0;
+}
+.content .right-content .right-content-bottom-body > div {
+  margin: 1rem 0;
+  flex-basis: 47%;
+}
+.content .right-content .right-content-bottom-body > div p {
+  color: #8d969d;
+  padding: 0.5rem 0;
+  line-height: 1rem;
+  font-size: 0.85rem;
+}
+.content .right-content .right-content-bottom-body > div div > span {
+  color: #8d969d;
+  padding: 0.5rem 0;
+  line-height: 1rem;
+  font-size: 0.85rem;
+}
+.content .right-content .right-content-bottom-body div:first-child {
+  flex-basis: 50%;
+}
+.content .right-content .right-content-bottom-body h4 {
+  color: #62b476;
+}
